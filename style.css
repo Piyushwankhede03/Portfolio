@@ -7,16 +7,18 @@
   scroll-behavior: smooth;
 }
 
-:root {
-  --bg-color: #fff;
-  --text-color: #333;
-  --accent: #f39c12;
+body {
+  background: #fff;
+  color: #333;
+  line-height: 1.6;
 }
 
-body {
-  background: var(--bg-color);
-  color: var(--text-color);
-  line-height: 1.6;
+a {
+  text-decoration: none;
+}
+
+.project-card a:hover {
+  text-decoration: underline;
 }
 
 /* Navbar */
@@ -33,25 +35,27 @@ nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  flex-wrap: wrap;
 }
 
 .nav-links {
   list-style: none;
   display: flex;
+  flex-wrap: wrap;
 }
 
 .nav-links li {
-  margin-left: 20px;
+  margin: 10px;
 }
 
+
 .nav-links a {
-  text-decoration: none;
   color: #fff;
   transition: color 0.3s;
 }
 
 .nav-links a:hover {
-  color: var(--accent);
+  color: #f39c12;
 }
 
 #theme-toggle {
@@ -74,16 +78,15 @@ nav {
 }
 
 .hero h2 span {
-  color: var(--accent);
+  color: #f39c12;
 }
 
 .btn {
   display: inline-block;
   margin-top: 15px;
   padding: 10px 20px;
-  background: var(--accent);
+  background: #f39c12;
   color: #fff;
-  text-decoration: none;
   border-radius: 5px;
 }
 
@@ -129,7 +132,7 @@ footer {
 }
 
 /* Dark Mode */
-.dark {
-  --bg-color: #121212;
-  --text-color: #f5f5f5;
+.dark body {
+  background: #121212;
+  color: #f5f5f5;
 }
